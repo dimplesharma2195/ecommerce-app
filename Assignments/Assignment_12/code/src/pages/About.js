@@ -1,11 +1,9 @@
-// src/pages/About.js
 import React from 'react';
 import { Container, Image } from 'react-bootstrap';
 
 const About = () => {
   return (
     <div>
-      {/* Common Heading */}
       <div className="bg-secondary text-center py-4 mt-5">
         <h1
           className="text-white fw-bold"
