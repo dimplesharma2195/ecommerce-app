@@ -8,17 +8,14 @@ const Header = () => {
   const { cartItems, openCart } = useContext(CartContext);
   const location = useLocation();
 
-  // Sum all item quantities
   const cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <Navbar fixed="top" style={{ backgroundColor: '#000000', fontFamily: 'Times New Roman' }} variant="dark">
       <Container fluid>
         <Row className="w-100 align-items-center">
-          {/* Left (empty) */}
           <Col xs={4} />
 
-          {/* Center Navigation */}
           <Col xs={4}>
             <Nav className="justify-content-center">
               <NavLink
@@ -63,7 +60,6 @@ const Header = () => {
                 ABOUT
               </NavLink>
               
-              {/* New Contact US Link */}
               <NavLink
                 to="/contact"
                 className="mx-4"
