@@ -1,4 +1,3 @@
-// src/components/PurchaseMessageModal.js
 import React, { useContext } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { CartContext } from '../context/CartContext';
