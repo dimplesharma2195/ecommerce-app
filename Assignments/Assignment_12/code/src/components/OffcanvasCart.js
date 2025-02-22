@@ -18,13 +18,12 @@ const OffcanvasCart = () => {
     .reduce((acc, item) => acc + item.price * item.quantity, 0)
     .toFixed(2);
 
-  // Purchase handler
   const handlePurchase = () => {
     if (cartItems.length === 0) {
       openPurchaseMessage('Cart is empty. Please add items for purchase.');
     } else {
       openPurchaseMessage('Congratulations on your purchase! 🎉');
-      setCartItems([]); // Reset cart after purchase
+      setCartItems([]); 
       closeCart();
     }
   };
