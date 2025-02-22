@@ -1,0 +1,29 @@
+.app-container {
+  background-color: black;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.fetch-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.divider {
+  margin: 20px auto;
+  width: 80%;
+  border: 1px solid white;
+}
+
+.form-separator {
+  border: 1px solid white;
+  margin: 30px auto;
+  width: 80%;
+}
