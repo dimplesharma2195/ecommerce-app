@@ -18,7 +18,6 @@ const Contact = () => {
     e.preventDefault();
     setError('');
 
-    // Simple validation
     if (!contactData.name || !contactData.email || !contactData.phone) {
       setError('All fields are required.');
       return;
@@ -45,7 +44,6 @@ const Contact = () => {
 
   return (
     <>
-      {/* Common "The Generics" Heading */}
       <div className="bg-secondary text-center py-4 mt-5">
         <h1 className="text-white fw-bold" style={{ fontSize: '6rem', fontFamily: 'Times New Roman' }}>
           The Generics
