@@ -1,4 +1,3 @@
-// src/context/CartContext.js
 import React, { createContext, useState } from 'react';
 
 export const CartContext = createContext();
@@ -7,15 +6,12 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [showCart, setShowCart] = useState(false);
 
-  // For purchase message (centered modal)
   const [showPurchaseMessage, setShowPurchaseMessage] = useState(false);
   const [purchaseMessage, setPurchaseMessage] = useState('');
 
-  // Open/Close Cart Offcanvas
   const openCart = () => setShowCart(true);
   const closeCart = () => setShowCart(false);
 
-  // Open/Close Purchase Message
   const openPurchaseMessage = (message) => {
     setPurchaseMessage(message);
     setShowPurchaseMessage(true);
@@ -23,11 +19,9 @@ export const CartProvider = ({ children }) => {
   const closePurchaseMessage = () => {
     setPurchaseMessage('');
     setShowPurchaseMessage(false);
-    // Ensure cart is closed if user closes the message
     closeCart();
   };
 
-  // Add item or increase quantity
   const addToCart = (product) => {
     setCartItems((prevItems) => {
       const existing = prevItems.find((item) => item.title === product.title);
@@ -42,7 +36,6 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  // Increase/Decrease quantity
   const increaseQuantity = (title) => {
     setCartItems((prevItems) =>
       prevItems.map((item) =>
@@ -62,7 +55,6 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  // Remove item altogether
   const removeItem = (title) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.title !== title));
   };
@@ -79,7 +71,6 @@ export const CartProvider = ({ children }) => {
         increaseQuantity,
         decreaseQuantity,
         removeItem,
-        // Purchase message
         showPurchaseMessage,
         openPurchaseMessage,
         closePurchaseMessage,
