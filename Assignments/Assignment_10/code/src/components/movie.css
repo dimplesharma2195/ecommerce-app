@@ -1,0 +1,17 @@
+.movie-container {
+    margin-bottom: 20px;
+  }
+  
+  .fetch-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .movie-info {
+    margin-top: 20px;
+    color: white;
+  }  
